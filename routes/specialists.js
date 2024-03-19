@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const specialists = require('../mockdata/specialists');
+const {
+  createSpecialist,
+  getSpecialists,
+  deleteSpecialist,
+} = require('../controllers/specialistController');
 
-router.get('/', (req, res) => {
-  res.send(specialists);
-});
+router.route('/').get(getSpecialists).post(createSpecialist);
+router.route('/:id').delete(deleteSpecialist);
 
 module.exports = router;
