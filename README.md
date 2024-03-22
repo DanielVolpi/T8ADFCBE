@@ -49,9 +49,9 @@ Let's assume you are running your BackEnd at port 4000 (Do you remember it? The 
 
 For both GET operations you will have to run "http://localhost:4000/specialists" and "http://localhost:4000/users".
 
-For the DELETE ones, it is basically the same jist "http://localhost:4000/specialists/<id>" and "http://localhost:4000/users/<id>".
+For the DELETE ones, it is basically the same jist "http://localhost:4000/specialists/:id" and "http://localhost:4000/users/:id".
 
-You can get the value to put in the <id> from the "_id" field in the GET response. (You see? All is coming together nicely.)
+You can get the value to put in the ":id" from the "_id" field in the GET response. (You see? All is coming together nicely.)
 
 For the POST operations the endpoints are the same ones as the GET, but on the body you will have to use "raw" and "JSON" and the data to provide is as follows:
 
